@@ -22,15 +22,17 @@ const userSchema = mongoose.Schema({
         type: Number,
         default: 0
     },
-    image: String,
+    image: {
+        String
+    },
     token: {
         type: String
     },
     tokenExp: {
         type: Number
     }
-})
+});
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = { User }
+module.exports = { User };
